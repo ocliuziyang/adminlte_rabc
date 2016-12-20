@@ -54,6 +54,9 @@ gulp.task('copyAdminLte', function () {
         .pipe(gulp.dest('public/css/fonts'));
     gulp.src('public/bower_components/Ionicons/fonts/*')
         .pipe(gulp.dest('public/css/fonts'));
+    gulp.src('public/bower_components/glyphicons/fonts/*')
+        .pipe(gulp.dest('public/css/fonts'));
+
 
 });
 
