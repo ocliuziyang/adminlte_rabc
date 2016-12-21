@@ -6,7 +6,7 @@ use App\Repositories\UserRepository;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class UserController extends Controller
+class UserController extends BaseController
 {
 
     private $userRepositoary;
@@ -14,6 +14,7 @@ class UserController extends Controller
     public function __construct(UserRepository $userRepository)
     {
         $this->userRepositoary = $userRepository;
+        parent::__construct();
     }
 
     /**

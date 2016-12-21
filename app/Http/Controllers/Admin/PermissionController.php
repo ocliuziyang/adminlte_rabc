@@ -6,7 +6,7 @@ use App\Repositories\PermissionRepository;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class PermissionController extends Controller
+class PermissionController extends BaseController
 {
 
     private $permissionRepositoary;
@@ -14,6 +14,7 @@ class PermissionController extends Controller
     public function __construct(PermissionRepository $permissionRepositoary)
     {
         $this->permissionRepositoary = $permissionRepositoary;
+        parent::__construct();
     }
     /**
      * Display a listing of the resource.

@@ -6,13 +6,14 @@ use App\Repositories\RoleRepository;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class RoleController extends Controller
+class RoleController extends BaseController
 {
 
     private $roleRepositoary;
     public function __construct(RoleRepository $roleRepository)
     {
         $this->roleRepositoary = $roleRepository;
+        parent::__construct();
     }
     /**
      * Display a listing of the resource.
