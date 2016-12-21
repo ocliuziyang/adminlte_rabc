@@ -10,8 +10,8 @@
         <div class="col-md-11">
             <div class="box">
                 <div class="box-header">
-                    <h3 class="box-title">用户管理</h3>
-                    <button class="btn btn-primary btn-sm" style="width: 100px; margin-left: 10px;" onclick="createItem()">新增</button>
+                    <h3 class="box-title">权限管理</h3>
+                    <button class="btn btn-primary btn-sm" style="width: 100px; margin-left: 10px;" data-toggle="modal" data-target="#addModalDialog">新增</button>
                     <div class="box-tools">
 
                         <div class="input-group input-group-sm" style="width: 150px;">
@@ -64,5 +64,8 @@
         </div>
     </div>
 
+    {{--添加模态框 -添加 --}}
+    @include('admin.permission.add')
 
 @endsection
+
