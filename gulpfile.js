@@ -34,6 +34,12 @@ gulp.task('copyAdminLte', function () {
         .pipe(gulp.dest('public/css/libs'));
     gulp.src('public/bower_components/AdminLTE/dist/css/skins/skin-green-light.css')
         .pipe(gulp.dest('public/css/libs'));
+    gulp.src('public/bower_components/fakeLoader/fakeLoader.css')
+        .pipe(gulp.dest('public/css/libs'));
+
+    gulp.src('public/bower_components/nprogress/nprogress.css')
+        .pipe(gulp.dest('public/css/libs'));
+
 
     //js
     gulp.src('public/bower_components/AdminLTE/plugins/jQuery/jquery-2.2.3.min.js')
@@ -43,6 +49,11 @@ gulp.task('copyAdminLte', function () {
         .pipe(gulp.dest('public/js/libs'));
 
     gulp.src('public/bower_components/AdminLTE/dist/js/app.js')
+        .pipe(gulp.dest('public/js/libs'));
+    gulp.src('public/bower_components/fakeLoader/fakeLoader.min.js')
+        .pipe(gulp.dest('public/js/libs'));
+
+    gulp.src('public/bower_components/nprogress/nprogress.js')
         .pipe(gulp.dest('public/js/libs'));
 
     //img
@@ -56,6 +67,8 @@ gulp.task('copyAdminLte', function () {
         .pipe(gulp.dest('public/css/fonts'));
     gulp.src('public/bower_components/glyphicons/fonts/*')
         .pipe(gulp.dest('public/css/fonts'));
+
+
 
 
 });

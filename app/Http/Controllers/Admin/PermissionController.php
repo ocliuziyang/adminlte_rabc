@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Repositories\PermissionRepository;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use League\Flysystem\Exception;
 
 class PermissionController extends BaseController
 {
@@ -46,7 +47,29 @@ class PermissionController extends BaseController
      */
     public function store(Request $request)
     {
-        //
+
+        $this->validate($request, [
+            'name' => 'required',
+            'display_name' => 'required',
+            'description' => 'required',
+            'fid' => 'required'
+        ]);
+
+        $res = $this->permissionRepositoary->savePermission($request);
+        if ($res) {
+            return [
+                'status' => 1,
+                'statusMsg' => '添加成功',
+                 'data' => $res
+            ];
+        } else {
+            return [
+                'status' => 0,
+                'statusMsg' => '添加失败'
+            ];
+        }
+
+
     }
 
     /**
@@ -69,6 +92,18 @@ class PermissionController extends BaseController
     public function edit($id)
     {
         //
+        $res = $this->permissionRepositoary->findPermissionById($id);
+        if ($res) {
+            return response([
+                'status' => 1,
+                'permission' => $res
+            ]);
+        }
+
+        return response([
+            'status' => 0
+        ]);
+
     }
 
     /**

@@ -49,7 +49,7 @@
                                     <td><span class="label label-primary">{{ $permission->created_at }}</span></td>
                                     <td><span class="label label-primary">{{ $permission->updated_at }}</span></td>
                                     <td>
-                                        <button class="btn btn-success btn-sm">编辑</button>
+                                        <button class="btn btn-success btn-sm" onclick="editItem('{{ route('admin.permission.edit', $permission->id) }}')">编辑</button>
                                         <button class="btn btn-danger btn-sm">删除</button>
                                     </td>
                                 </tr>
@@ -66,6 +66,6 @@
 
     {{--添加模态框 -添加 --}}
     @include('admin.permission.add')
-
+    @include('admin.permission.edit')
 @endsection
 

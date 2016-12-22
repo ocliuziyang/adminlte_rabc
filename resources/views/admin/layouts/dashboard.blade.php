@@ -23,6 +23,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
           apply the skin class to the body tag so the changes take effect.
     -->
     <link rel="stylesheet" href="{{ asset('css/libs/skin-green-light.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/libs/nprogress.css') }}">
+
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -173,6 +176,9 @@ desired effect
 <script src="{{ asset('js/libs/bootstrap.min.js') }}"></script>
 <!-- AdminLTE App -->
 <script src="{{ asset('js/libs/app.js') }}"></script>
+<script src="{{ asset('js/libs/nprogress.js') }}"></script>
+
+
 
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the
